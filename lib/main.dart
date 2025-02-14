@@ -1,20 +1,22 @@
 import 'package:flutter/material.dart';
+import 'package:mantenimmiento_toner/views/auth/login.dart'; // Asegúrate de que la ruta sea correcta
 
 void main() {
-  runApp(const MainApp());
+  runApp(MyApp());
 }
 
-class MainApp extends StatelessWidget {
-  const MainApp({super.key});
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Scaffold(
-        body: Center(
-          child: Text('Hello World!'),
-        ),
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'Mantenimiento Tóner',
+      theme: ThemeData(
+        primarySwatch: Colors.deepPurple,
       ),
+      home: LoginScreen(),
     );
   }
 }
