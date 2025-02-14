@@ -53,7 +53,7 @@ class _LoginScreenState extends State<LoginScreen> {
         children: [
           // *** MITAD SUPERIOR ***
           SizedBox(
-            height: MediaQuery.of(context).size.height * 0.51,
+            height: MediaQuery.of(context).size.height * 0.50, // Reducir altura
             width: double.infinity,
             child: Stack(
               alignment: Alignment.center,
@@ -64,8 +64,8 @@ class _LoginScreenState extends State<LoginScreen> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Image.asset('assets/images/login.png',
-                        width: 180, height: 180),
-                    SizedBox(height: 5),
+                        width: 170, height: 170),
+                    SizedBox(height: 100),
                     Text(
                       'Mantenimiento y Gestión de Tóner',
                       style: TextStyle(
@@ -88,7 +88,7 @@ class _LoginScreenState extends State<LoginScreen> {
           // *** MITAD INFERIOR ***
           Expanded(
             child: Padding(
-              padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+              padding: EdgeInsets.symmetric(horizontal: 50, vertical: 10),
               child: SingleChildScrollView(
                 controller: _scrollController,
                 keyboardDismissBehavior:
@@ -110,7 +110,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         ),
                         SizedBox(height: 10),
                         _buildTextField('Nombre', nombreController, _nombreKey),
-                        SizedBox(height: 15),
+                        SizedBox(height: 10),
                         _buildTextField(
                           'Teléfono',
                           telefonoController,
@@ -129,7 +129,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         ),
                         SizedBox(height: 15),
                         _buildTextField('Código', codigoController, _codigoKey),
-                        SizedBox(height: 20),
+                        SizedBox(height: 50),
 
                         // Botón con indicador de carga
                         SizedBox(
